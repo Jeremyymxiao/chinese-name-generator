@@ -9,10 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "analyze": "ANALYZE=true npm run build",
+    "analyze": "ANALYZE=true pnpm run build",
     "cf:build": "npx @cloudflare/next-on-pages",
-    "cf:preview": "npm run cf:build && wrangler pages dev",
-    "cf:deploy": "npm run cf:build && wrangler pages deploy",
+    "cf:preview": "pnpm run cf:build && wrangler pages dev",
+    "cf:deploy": "pnpm run cf:build && wrangler pages deploy",
     "migrate-to-supabase": "node --loader ts-node/esm scripts/migrate-to-supabase.ts"
   },
   "dependencies": {

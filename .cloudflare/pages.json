@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run cf:build",
-  "installCommand": "npm install",
+  "buildCommand": "pnpm run cf:build",
+  "installCommand": "pnpm install",
   "outputDirectory": ".vercel/output/static",
-  "nodeVersion": "20"
+  "nodeVersion": "18"
 } 
