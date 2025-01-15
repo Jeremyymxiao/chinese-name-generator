@@ -1,13 +1,11 @@
+export const runtime = 'edge';
+
 import { JSONValue, experimental_generateImage as generateImage } from "ai";
 import { respData, respErr } from "@/lib/resp";
-
 import type { ImageModelV1 } from "@ai-sdk/provider";
-import { getUuid } from "@/lib/hash";
 import { kling } from "@/aisdk/kling";
 import { openai } from "@ai-sdk/openai";
-import path from "path";
 import { replicate } from "@ai-sdk/replicate";
-import { writeFile } from "fs/promises";
 
 export async function POST(req: Request) {
   try {
@@ -59,25 +57,11 @@ export async function POST(req: Request) {
       return respErr("gen images failed");
     }
 
-    const batch = getUuid();
-
-    const processedImages = await Promise.all(
-      images.map(async (image, index) => {
-        const fileName = `${provider}_image_${batch}_${index}.png`;
-        const filePath = path.join(process.cwd(), ".tmp", fileName);
-
-        const buffer = Buffer.from(image.base64, "base64");
-        await writeFile(filePath, buffer);
-
-        return {
-          provider,
-          fileName,
-          filePath,
-        };
-      })
-    );
-
-    return respData(processedImages);
+    // 直接返回 base64 图片数据，而不是保存到文件系统
+    return respData(images.map(image => ({
+      provider,
+      base64: image.base64,
+    })));
   } catch (err) {
     console.log("gen image failed:", err);
     return respErr("gen image failed");

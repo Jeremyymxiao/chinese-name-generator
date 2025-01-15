@@ -1,5 +1,7 @@
 'use client';
 
+export const runtime = "edge";
+
 import { useState } from 'react';
 import { NameGeneratorForm } from '@/components/name-generator/NameGeneratorForm';
 import { GeneratedNamesList } from '@/components/name-generator/GeneratedNamesList';

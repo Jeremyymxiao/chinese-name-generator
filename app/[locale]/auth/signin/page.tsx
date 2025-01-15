@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import SignForm from "@/components/sign/form";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";

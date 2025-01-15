@@ -1,29 +1,25 @@
-import { TableColumn } from "@/types/blocks/table";
-import TableSlot from "@/components/dashboard/slots/table";
-import { Table as TableSlotType } from "@/types/slots/table";
-import { getPaiedOrders } from "@/models/order";
-import moment from "moment";
+export const runtime = 'edge';
 
-export default async function () {
-  const orders = await getPaiedOrders(1, 50);
+import { redirect } from 'next/navigation';
+import { auth } from '@/auth';
+import React from 'react';
 
-  const columns: TableColumn[] = [
-    { name: "order_no", title: "Order No" },
-    { name: "paid_email", title: "Paid Email" },
-    { name: "product_name", title: "Product Name" },
-    { name: "amount", title: "Amount" },
-    {
-      name: "created_at",
-      title: "Created At",
-      callback: (row) => moment(row.created_at).format("YYYY-MM-DD HH:mm:ss"),
-    },
-  ];
+export default async function PaidOrdersPage() {
+  const session = await auth();
+  
+  if (!session?.user) {
+    redirect('/auth/signin');
+  }
 
-  const table: TableSlotType = {
-    title: "Paid Orders",
-    columns,
-    data: orders,
-  };
-
-  return <TableSlot {...table} />;
+  return (
+    <div className="container py-8">
+      <h1 className="mb-8 text-3xl font-bold">Paid Orders</h1>
+      <div className="rounded-lg border">
+        {/* TODO: Add orders table */}
+        <div className="p-4 text-center text-muted-foreground">
+          No orders found
+        </div>
+      </div>
+    </div>
+  );
 }

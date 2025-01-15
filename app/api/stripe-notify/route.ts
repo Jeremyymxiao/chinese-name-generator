@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import Stripe from "stripe";
 import { handleOrderSession } from "@/services/order";
 import { respOk } from "@/lib/resp";

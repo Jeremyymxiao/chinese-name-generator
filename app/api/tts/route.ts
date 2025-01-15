@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { NextRequest, NextResponse } from 'next/server';
 import { generateSpeech } from '@/lib/youdao-tts';
 import { TTSRequest } from '@/types/audio';

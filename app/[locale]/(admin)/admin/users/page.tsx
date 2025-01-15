@@ -1,35 +1,25 @@
-import { TableColumn } from "@/types/blocks/table";
-import TableSlot from "@/components/dashboard/slots/table";
-import { Table as TableSlotType } from "@/types/slots/table";
-import { getUsers } from "@/models/user";
-import moment from "moment";
+export const runtime = 'edge';
 
-export default async function () {
-  const users = await getUsers(1, 50);
+import { redirect } from 'next/navigation';
+import { auth } from '@/auth';
+import React from 'react';
 
-  const columns: TableColumn[] = [
-    { name: "uuid", title: "UUID" },
-    { name: "email", title: "Email" },
-    { name: "nickname", title: "Name" },
-    {
-      name: "avatar_url",
-      title: "Avatar",
-      callback: (row) => (
-        <img src={row.avatar_url} className="w-10 h-10 rounded-full" />
-      ),
-    },
-    {
-      name: "created_at",
-      title: "Created At",
-      callback: (row) => moment(row.created_at).format("YYYY-MM-DD HH:mm:ss"),
-    },
-  ];
+export default async function UsersPage() {
+  const session = await auth();
+  
+  if (!session?.user) {
+    redirect('/auth/signin');
+  }
 
-  const table: TableSlotType = {
-    title: "All Users",
-    columns,
-    data: users,
-  };
-
-  return <TableSlot {...table} />;
+  return (
+    <div className="container py-8">
+      <h1 className="mb-8 text-3xl font-bold">User Management</h1>
+      <div className="rounded-lg border">
+        {/* TODO: Add user list table */}
+        <div className="p-4 text-center text-muted-foreground">
+          No users found
+        </div>
+      </div>
+    </div>
+  );
 }

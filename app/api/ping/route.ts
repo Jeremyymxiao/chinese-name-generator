@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { respData, respErr } from "@/lib/resp";
 
 export async function POST(req: Request) {
