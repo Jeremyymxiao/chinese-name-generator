@@ -1,0 +1,328 @@
+{
+  "template": "shipany-template-one",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Chinese Name Generator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Chinese Name Generator"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Features",
+          "url": "/#feature",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "How It Works",
+          "url": "/#usage",
+          "icon": "RiQuestionLine"
+        },
+        {
+          "title": "Pricing",
+          "url": "/#pricing",
+          "icon": "MdPayment"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Generate Name",
+        "url": "/generate",
+        "variant": "default",
+        "icon": "RiMagicFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Discover Your Perfect Chinese Name",
+    "highlight_text": "Chinese Name",
+    "description": "Generate meaningful and culturally appropriate Chinese names with our AI-powered tool.<br/>Get personalized names with pronunciation guides and cultural significance.",
+    "tip": "✨ Try our free name generator now",
+    "buttons": [
+      {
+        "title": "Generate Name",
+        "icon": "RiMagicFill",
+        "url": "/generate",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Learn More",
+        "icon": "RiBookOpenLine",
+        "url": "/#feature",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": true,
+    "show_badge": true
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Why Choose Our Chinese Name Generator",
+    "description": "Generate authentic Chinese names that reflect your identity and values.",
+    "items": [
+      {
+        "title": "Cultural Accuracy",
+        "description": "Names generated following Chinese naming conventions and cultural practices.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Meaning Explanation",
+        "description": "Detailed explanations of each character's meaning and cultural significance.",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Pronunciation Guide",
+        "description": "Audio pronunciations and pinyin for easy learning and sharing.",
+        "icon": "RiVolumeUpLine"
+      },
+      {
+        "title": "Gender Options",
+        "description": "Generate names suitable for any gender preference.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Character Combinations",
+        "description": "Thousands of beautiful character combinations to choose from.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Personal Customization",
+        "description": "Customize names based on your preferences and meaning.",
+        "icon": "RiPaletteLine"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Get Your Chinese Name",
+    "description": "Follow these simple steps to generate your perfect Chinese name:",
+    "items": [
+      {
+        "title": "Enter Your Details",
+        "description": "Provide your preferences including gender, desired meaning, and style.",
+        "image": {
+          "src": "/imgs/features/1.png"
+        }
+      },
+      {
+        "title": "Generate Names",
+        "description": "Our AI will generate multiple name options based on your preferences.",
+        "image": {
+          "src": "/imgs/features/2.png"
+        }
+      },
+      {
+        "title": "Explore Meanings",
+        "description": "Learn about each name's meaning, pronunciation, and cultural significance.",
+        "image": {
+          "src": "/imgs/features/3.png"
+        }
+      },
+      {
+        "title": "Choose Your Name",
+        "description": "Select your favorite name and get detailed information about it.",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Pricing",
+    "title": "Simple Pricing for Everyone",
+    "description": "Choose the plan that best fits your needs.",
+    "items": [
+      {
+        "title": "Free",
+        "description": "Perfect for trying out our service",
+        "features": [
+          "3 name generations per day",
+          "Basic meaning explanations",
+          "Simple pronunciation guide",
+          "Gender-specific options"
+        ],
+        "interval": "month",
+        "amount": 0,
+        "currency": "USD",
+        "price": "$0",
+        "unit": "month",
+        "is_featured": false,
+        "button": {
+          "title": "Start Free",
+          "url": "/generate",
+          "icon": "RiFlashlightFill"
+        }
+      },
+      {
+        "title": "Premium",
+        "description": "For those seeking the perfect name",
+        "features": [
+          "Unlimited name generations",
+          "Detailed character meanings",
+          "Audio pronunciation",
+          "Cultural significance",
+          "Name certificates",
+          "Priority support"
+        ],
+        "interval": "month",
+        "amount": 999,
+        "currency": "USD",
+        "price": "$9.99",
+        "unit": "month",
+        "is_featured": true,
+        "button": {
+          "title": "Get Premium",
+          "url": "/pricing",
+          "icon": "RiVipCrownFill"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Have questions? We're here to help.",
+    "items": [
+      {
+        "title": "How accurate are the generated Chinese names?",
+        "description": "Our names are generated using AI trained on traditional Chinese naming conventions and modern usage patterns. Each name is verified for cultural appropriateness and meaning."
+      },
+      {
+        "title": "Can I get different name options?",
+        "description": "Yes! You can generate multiple name options and customize based on your preferences for meaning, sound, and style."
+      },
+      {
+        "title": "Do you provide meaning explanations?",
+        "description": "Yes, each name comes with detailed explanations of individual characters, overall meaning, and cultural significance."
+      },
+      {
+        "title": "How do I pronounce my Chinese name?",
+        "description": "We provide pinyin (romanization) and audio pronunciations for each name. Premium users get access to detailed pronunciation guides."
+      },
+      {
+        "title": "Are the names appropriate for official use?",
+        "description": "Yes, all generated names follow proper Chinese naming conventions and are suitable for official documents, though we recommend verifying with local authorities for legal requirements."
+      },
+      {
+        "title": "Can I generate names for different genders?",
+        "description": "Absolutely! You can specify gender preference, and our system will generate appropriate names accordingly."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Ready to Get Your Chinese Name?",
+    "description": "Join thousands of others who have found their perfect Chinese name.",
+    "buttons": [
+      {
+        "title": "Generate Now",
+        "url": "/generate",
+        "target": "_self",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Learn More",
+        "url": "/#feature",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Chinese Name Generator",
+      "description": "Generate meaningful and culturally appropriate Chinese names with our AI-powered tool.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Chinese Name Generator"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2024 • Chinese Name Generator All rights reserved.",
+    "nav": {
+      "items": [
+        {
+          "title": "Product",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "How It Works",
+              "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Pricing",
+              "url": "/#pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Name Guide",
+              "url": "/guide",
+              "target": "_self"
+            },
+            {
+              "title": "Blog",
+              "url": "/blog",
+              "target": "_self"
+            },
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://twitter.com/chinesename",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@chinesename.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        }
+      ]
+    }
+  }
+}

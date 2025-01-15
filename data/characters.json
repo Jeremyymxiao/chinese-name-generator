@@ -1,0 +1,62 @@
+[
+  {
+    "simplified": "爱",
+    "pinyin": "ài",
+    "meanings": ["love", "affection", "to love"],
+    "frequency": 95,
+    "strokes": 13,
+    "isCommon": true,
+    "gender": "NEUTRAL",
+    "positions": ["MIDDLE", "LAST"],
+    "combinations": ["心", "德", "慧"],
+    "tone": 4
+  },
+  {
+    "simplified": "德",
+    "pinyin": "dé",
+    "meanings": ["virtue", "morality", "ethics"],
+    "frequency": 85,
+    "strokes": 15,
+    "isCommon": true,
+    "gender": "NEUTRAL",
+    "positions": ["MIDDLE", "LAST"],
+    "combinations": ["爱", "慧", "明"],
+    "tone": 2
+  },
+  {
+    "simplified": "慧",
+    "pinyin": "huì",
+    "meanings": ["intelligent", "wise", "wisdom"],
+    "frequency": 80,
+    "strokes": 15,
+    "isCommon": true,
+    "gender": "F",
+    "positions": ["MIDDLE", "LAST"],
+    "combinations": ["爱", "德", "明"],
+    "tone": 4
+  },
+  {
+    "simplified": "明",
+    "pinyin": "míng",
+    "meanings": ["bright", "clear", "intelligent"],
+    "frequency": 90,
+    "strokes": 8,
+    "isCommon": true,
+    "gender": "NEUTRAL",
+    "positions": ["FIRST", "LAST"],
+    "combinations": ["德", "慧", "心"],
+    "tone": 2
+  },
+  {
+    "simplified": "心",
+    "pinyin": "xīn",
+    "meanings": ["heart", "mind", "soul"],
+    "frequency": 85,
+    "strokes": 4,
+    "isCommon": true,
+    "gender": "NEUTRAL",
+    "positions": ["MIDDLE", "LAST"],
+    "combinations": ["爱", "德", "明"],
+    "tone": 1
+  }
+] 
