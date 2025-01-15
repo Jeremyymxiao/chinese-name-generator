@@ -1,5 +1,5 @@
 {
-  "name": "shipany-template-one",
+  "name": "chinese-name-generator",
   "version": "1.0.0",
   "private": true,
   "author": "idoubi",
@@ -13,7 +13,14 @@
     "cf:build": "npx @cloudflare/next-on-pages",
     "cf:preview": "pnpm run cf:build && wrangler pages dev",
     "cf:deploy": "pnpm run cf:build && wrangler pages deploy",
+    "clean": "rm -rf node_modules .next .vercel/output",
+    "clean:all": "pnpm clean && rm -rf pnpm-lock.yaml",
     "migrate-to-supabase": "node --loader ts-node/esm scripts/migrate-to-supabase.ts"
+  },
+  "packageManager": "pnpm@8.7.1",
+  "engines": {
+    "node": ">=18.12.0",
+    "pnpm": ">=8.7.1"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.0.18",
