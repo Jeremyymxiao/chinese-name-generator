@@ -100,7 +100,11 @@ importers:
         version: 5.5.0
       '@supabase/supabase-js':
         specifier: ^2.47.10
+<<<<<<< HEAD
         version: 2.47.15
+=======
+        version: 2.47.14
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       '@types/canvas-confetti':
         specifier: ^1.9.0
         version: 1.9.0
@@ -134,9 +138,12 @@ importers:
       embla-carousel-react:
         specifier: ^8.5.1
         version: 8.5.2(react@18.3.1)
+<<<<<<< HEAD
       firebase:
         specifier: ^11.1.0
         version: 11.1.0
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       framer-motion:
         specifier: ^11.15.0
         version: 11.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -146,9 +153,12 @@ importers:
       highlight.js:
         specifier: ^11.11.0
         version: 11.11.1
+<<<<<<< HEAD
       https-proxy-agent:
         specifier: ^7.0.6
         version: 7.0.6
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       lucide-react:
         specifier: ^0.439.0
         version: 0.439.0(react@18.3.1)
@@ -218,6 +228,7 @@ importers:
     devDependencies:
       '@cloudflare/next-on-pages':
         specifier: ^1.13.7
+<<<<<<< HEAD
         version: 1.13.7(vercel@39.1.1)(wrangler@3.103.0)
       '@next/bundle-analyzer':
         specifier: ^15.1.3
@@ -228,6 +239,12 @@ importers:
       '@types/firebase':
         specifier: ^2.4.32
         version: 2.4.32
+=======
+        version: 1.13.7(vercel@39.1.1)(wrangler@3.102.0)
+      '@next/bundle-analyzer':
+        specifier: ^15.1.3
+        version: 15.1.4
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       '@types/markdown-it':
         specifier: ^14.1.2
         version: 14.1.2
@@ -355,6 +372,7 @@ packages:
       '@cloudflare/workers-types':
         optional: true
 
+<<<<<<< HEAD
   '@cloudflare/unenv-preset@1.0.0':
     resolution: {integrity: sha512-rnihjY4xUsBmlqp0eM2tQXm+40aj3C7WhdH4eGHkLaoBKr3+LwuENByYm5mf65WEeA5NE6BolTnjkiJUts3RuA==}
     peerDependencies:
@@ -364,6 +382,8 @@ packages:
       workerd:
         optional: true
 
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
   '@cloudflare/workerd-darwin-64@1.20241230.0':
     resolution: {integrity: sha512-BZHLg4bbhNQoaY1Uan81O3FV/zcmWueC55juhnaI7NAobiQth9RppadPNpxNAmS9fK2mR5z8xrwMQSQrHmztyQ==}
     engines: {node: '>=16'}
@@ -587,6 +607,7 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
+<<<<<<< HEAD
   '@firebase/analytics-compat@0.2.16':
     resolution: {integrity: sha512-Q/s+u/TEMSb2EDJFQMGsOzpSosybBl8HuoSEMyGZ99+0Pu7SIR9MPDGUjc8PKiCFQWDJ3QXxgqh1d/rujyAMbA==}
     peerDependencies:
@@ -800,6 +821,11 @@ packages:
   '@floating-ui/core@1.6.9':
     resolution: {integrity: sha512-uMXCuQ3BItDUbAMhIXw7UPXRfAlOAvZzdK9BWpE60MCn+Svt3aLn9jsPTi/WNGlRUu2uI0v5S7JiIUsbsvh3fw==}
 
+=======
+  '@floating-ui/core@1.6.9':
+    resolution: {integrity: sha512-uMXCuQ3BItDUbAMhIXw7UPXRfAlOAvZzdK9BWpE60MCn+Svt3aLn9jsPTi/WNGlRUu2uI0v5S7JiIUsbsvh3fw==}
+
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
   '@floating-ui/dom@1.6.13':
     resolution: {integrity: sha512-umqzocjDgNRGTuO7Q8CU32dkHkECqI8ZdMZ5Swb6QAM0t5rnlrN3lGo1hdpscRd3WS8T6DKYK4ephgIH9iRh3w==}
 
@@ -1551,8 +1577,13 @@ packages:
   '@supabase/storage-js@2.7.1':
     resolution: {integrity: sha512-asYHcyDR1fKqrMpytAS1zjyEfvxuOIp1CIXX7ji4lHHcJKqyk+sLl/Vxgm4sN6u8zvuUtae9e4kDxQP2qrwWBA==}
 
+<<<<<<< HEAD
   '@supabase/supabase-js@2.47.15':
     resolution: {integrity: sha512-Ufeqya/8L7Y1CDmpo7HquoHaF/MiRGHhnPE7Djz43ExL0hQnnrzUfu5bBeFXkzQ3uiuaA+fbGMaWlXaSbqKJ7g==}
+=======
+  '@supabase/supabase-js@2.47.14':
+    resolution: {integrity: sha512-Jmm9fN+16KwC2s7GEudiEnVpz5+Bc0DEMrjI3CKPWoRArTEZPUiOm7y1IbAJ3zSpvwsdk9i/c/k7wqCbwlBj9A==}
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -4092,9 +4123,12 @@ packages:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
 
+<<<<<<< HEAD
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
   sonner@1.7.2:
     resolution: {integrity: sha512-zMbseqjrOzQD1a93lxahm+qMGxWovdMxBlkTbbnZdNqVLt4j+amF9PQxUCL32WfztOFt9t9ADYkejAL3jF9iNA==}
     peerDependencies:
@@ -4396,12 +4430,17 @@ packages:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
     engines: {node: '>=14.0'}
 
+<<<<<<< HEAD
   undici@5.28.5:
     resolution: {integrity: sha512-zICwjrDrcrUE0pyyJc1I2QzBkLM8FINsgOrt6WjA+BgajVq9Nxu2PbFFXUrAggLfDXlZGZBVZYw7WNV5KiBiBA==}
     engines: {node: '>=14.0'}
 
   unenv-nightly@2.0.0-20250109-100802-88ad671:
     resolution: {integrity: sha512-Uij6gODNNNNsNBoDlnaMvZI99I6YlVJLRfYH8AOLMlbFrW7k2w872v9VLuIdch2vF8QBeSC4EftIh5sG4ibzdA==}
+=======
+  unenv-nightly@2.0.0-20241218-183400-5d6aec3:
+    resolution: {integrity: sha512-7Xpi29CJRbOV1/IrC03DawMJ0hloklDLq/cigSe+J2jkcC+iDres2Cy0r4ltj5f0x7DqsaGaB4/dLuCPPFZnZA==}
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
 
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
@@ -4575,8 +4614,13 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
+<<<<<<< HEAD
   wrangler@3.103.0:
     resolution: {integrity: sha512-DK1wLHwiELI5jmHolf7ZCWji+CkSgSZdD/ccrCtDWr5r9vJSb6gpPG9Dc7E68Z/yMFub9+r2XuwKLHEABMLZWw==}
+=======
+  wrangler@3.102.0:
+    resolution: {integrity: sha512-Za4DstbS3+/hu+///K/4dFFeV6XbPBAGp7NCnVajchxRTwEPTdbO5eezH0HLJPMHK6G/0yIzyhlEMnyg4YzHAA==}
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -4739,7 +4783,11 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
+<<<<<<< HEAD
   '@cloudflare/next-on-pages@1.13.7(vercel@39.1.1)(wrangler@3.103.0)':
+=======
+  '@cloudflare/next-on-pages@1.13.7(vercel@39.1.1)(wrangler@3.102.0)':
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
     dependencies:
       acorn: 8.14.0
       ast-types: 0.14.2
@@ -4754,18 +4802,25 @@ snapshots:
       pcre-to-regexp: 1.1.0
       semver: 7.6.3
       vercel: 39.1.1
+<<<<<<< HEAD
       wrangler: 3.103.0
+=======
+      wrangler: 3.102.0
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
+<<<<<<< HEAD
   '@cloudflare/unenv-preset@1.0.0(unenv-nightly@2.0.0-20250109-100802-88ad671)(workerd@1.20241230.0)':
     dependencies:
       unenv: unenv-nightly@2.0.0-20250109-100802-88ad671
     optionalDependencies:
       workerd: 1.20241230.0
 
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
   '@cloudflare/workerd-darwin-64@1.20241230.0':
     optional: true
 
@@ -4890,6 +4945,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
+<<<<<<< HEAD
   '@firebase/analytics-compat@0.2.16(@firebase/app-compat@0.2.47)(@firebase/app@0.10.17)':
     dependencies:
       '@firebase/analytics': 0.10.10(@firebase/app@0.10.17)
@@ -5213,6 +5269,14 @@ snapshots:
 
   '@floating-ui/dom@1.6.13':
     dependencies:
+=======
+  '@floating-ui/core@1.6.9':
+    dependencies:
+      '@floating-ui/utils': 0.2.9
+
+  '@floating-ui/dom@1.6.13':
+    dependencies:
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       '@floating-ui/core': 1.6.9
       '@floating-ui/utils': 0.2.9
 
@@ -6016,7 +6080,11 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
+<<<<<<< HEAD
   '@supabase/supabase-js@2.47.15':
+=======
+  '@supabase/supabase-js@2.47.14':
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
     dependencies:
       '@supabase/auth-js': 2.67.3
       '@supabase/functions-js': 2.4.4
@@ -7597,10 +7665,13 @@ snapshots:
   icss-utils@5.1.0(postcss@8.5.1):
     dependencies:
       postcss: 8.5.1
+<<<<<<< HEAD
 
   idb@7.1.1: {}
 
   ieee754@1.2.1: {}
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
 
   import-fresh@3.3.0:
     dependencies:
@@ -8147,7 +8218,11 @@ snapshots:
       exit-hook: 2.2.1
       glob-to-regexp: 0.4.1
       stoppable: 1.1.0
+<<<<<<< HEAD
       undici: 5.28.5
+=======
+      undici: 5.28.4
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       workerd: 1.20241230.0
       ws: 8.18.0
       youch: 3.3.4
@@ -8880,8 +8955,11 @@ snapshots:
       mrmime: 2.0.0
       totalist: 3.0.1
 
+<<<<<<< HEAD
   sisteransi@1.0.5: {}
 
+=======
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
   sonner@1.7.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
@@ -9190,11 +9268,15 @@ snapshots:
     dependencies:
       '@fastify/busboy': 2.1.1
 
+<<<<<<< HEAD
   undici@5.28.5:
     dependencies:
       '@fastify/busboy': 2.1.1
 
   unenv-nightly@2.0.0-20250109-100802-88ad671:
+=======
+  unenv-nightly@2.0.0-20241218-183400-5d6aec3:
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
     dependencies:
       defu: 6.1.4
       mlly: 1.7.4
@@ -9426,7 +9508,11 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20241230.0
       '@cloudflare/workerd-windows-64': 1.20241230.0
 
+<<<<<<< HEAD
   wrangler@3.103.0:
+=======
+  wrangler@3.102.0:
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@cloudflare/unenv-preset': 1.0.0(unenv-nightly@2.0.0-20250109-100802-88ad671)(workerd@1.20241230.0)
@@ -9436,7 +9522,11 @@ snapshots:
       esbuild: 0.17.19
       miniflare: 3.20241230.2
       path-to-regexp: 6.3.0
+<<<<<<< HEAD
       unenv: unenv-nightly@2.0.0-20250109-100802-88ad671
+=======
+      unenv: unenv-nightly@2.0.0-20241218-183400-5d6aec3
+>>>>>>> 3fc126f73ed19e214054343bce6843735756a0e3
       workerd: 1.20241230.0
     optionalDependencies:
       fsevents: 2.3.3
