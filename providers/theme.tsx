@@ -8,10 +8,11 @@ import type { ThemeProviderProps } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import { cacheGet } from "@/lib/cache";
 import { useAppContext } from "@/contexts/app";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   const { theme, setTheme } = useAppContext();
+  const [isSignModalOpen, setIsSignModalOpen] = useState(false);
 
   useEffect(() => {
     const themeInCache = cacheGet(CacheKey.Theme);
@@ -40,7 +41,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
       {children}
 
       <Toaster position="top-center" richColors />
-      <SignModal />
+      <SignModal open={isSignModalOpen} onOpenChange={setIsSignModalOpen} />
       <Analytics />
     </NextThemesProvider>
   );

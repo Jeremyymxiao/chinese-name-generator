@@ -1,8 +1,8 @@
 import { findUserByEmail, findUserByUuid, insertUser } from "@/models/user";
-
 import { User } from "@/types/user";
-import { auth } from "@/auth";
 import { headers } from "next/headers";
+import { auth } from "@/lib/firebase";
+import { getAuth } from "firebase/auth";
 
 export async function saveUser(user: User) {
   try {
@@ -28,9 +28,9 @@ export async function saveUser(user: User) {
 export async function getUserUuid() {
   let user_uuid = "";
 
-  const session = await auth();
-  if (session && session.user && session.user.uuid) {
-    user_uuid = session.user.uuid;
+  const currentUser = auth.currentUser;
+  if (currentUser) {
+    user_uuid = currentUser.uid;
   }
 
   return user_uuid;
@@ -49,9 +49,9 @@ export function getBearerToken() {
 export async function getUserEmail() {
   let user_email = "";
 
-  const session = await auth();
-  if (session && session.user && session.user.email) {
-    user_email = session.user.email;
+  const currentUser = auth.currentUser;
+  if (currentUser) {
+    user_email = currentUser.email || "";
   }
 
   return user_email;

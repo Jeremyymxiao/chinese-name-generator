@@ -1,54 +1,49 @@
 "use client";
 
-import {
-  ReactNode,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { createContext, useContext, useState } from "react";
+import { useAuth } from "./AuthContext";
 
-import { ContextValue } from "@/types/context";
-import { User } from "@/types/user";
-import useOneTapLogin from "@/hooks/useOneTapLogin";
-import { useSession } from "next-auth/react";
+interface AppContextType {
+  user: any;
+  loading: boolean;
+  theme: string;
+  setTheme: (theme: string) => void;
+  showSignModal: boolean;
+  setShowSignModal: (show: boolean) => void;
+}
 
-const AppContext = createContext({} as ContextValue);
+const AppContext = createContext<AppContextType>({
+  user: null,
+  loading: true,
+  theme: "light",
+  setTheme: () => {},
+  showSignModal: false,
+  setShowSignModal: () => {},
+});
 
-export const useAppContext = () => useContext(AppContext);
-
-export const AppContextProvider = ({ children }: { children: ReactNode }) => {
-  if (
-    process.env.NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED === "true" &&
-    process.env.NEXT_PUBLIC_AUTH_GOOGLE_ID
-  ) {
-    useOneTapLogin();
-  }
-
-  const { data: session } = useSession();
-
-  const [theme, setTheme] = useState<string>("light");
-  const [showSignModal, setShowSignModal] = useState<boolean>(false);
-  const [user, setUser] = useState<User | null>(null);
-
-  useEffect(() => {
-    if (session && session.user) {
-      setUser(session.user);
-    }
-  }, [session]);
+export function AppContextProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { user, loading } = useAuth();
+  const [theme, setTheme] = useState("light");
+  const [showSignModal, setShowSignModal] = useState(false);
 
   return (
     <AppContext.Provider
       value={{
+        user,
+        loading,
         theme,
         setTheme,
         showSignModal,
         setShowSignModal,
-        user,
-        setUser,
       }}
     >
       {children}
     </AppContext.Provider>
   );
-};
+}
+
+export const useAppContext = () => useContext(AppContext);

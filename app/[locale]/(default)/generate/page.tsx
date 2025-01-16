@@ -7,6 +7,7 @@ import { NameGeneratorForm } from '@/components/name-generator/NameGeneratorForm
 import { GeneratedNamesList } from '@/components/name-generator/GeneratedNamesList';
 import { NamePreference } from '@/services/nameGenerator';
 import type { GeneratedName } from '@/services/nameGenerator';
+import { toast } from 'sonner';
 
 export default function GeneratePage() {
   const [generatedNames, setGeneratedNames] = useState<GeneratedName[]>([]);
@@ -14,7 +15,7 @@ export default function GeneratePage() {
 
   const handleGenerateNames = async (preferences: NamePreference) => {
     try {
-      console.log('Generating name with preferences:', preferences);
+      console.log('Generating name with preferences:', JSON.stringify(preferences, null, 2));
       setLastPreferences(preferences);
       const response = await fetch('/api/generate-name', {
         method: 'POST',
@@ -24,17 +25,20 @@ export default function GeneratePage() {
         body: JSON.stringify(preferences),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to generate name');
+        console.error('Server response error:', data);
+        throw new Error(data.error || 'Failed to generate name');
       }
 
-      const data = await response.json();
-      console.log('Received generated name:', data);
-      setGeneratedNames(prev => [...data.name, ...prev]);
-      console.log('Updated state with name:', data.name);
+      console.log('Received generated name:', JSON.stringify(data, null, 2));
+      setGeneratedNames(prev => [...data.names, ...prev]);
+      console.log('Updated state with names:', JSON.stringify(data.names, null, 2));
+      toast.success('Names generated successfully!');
     } catch (error) {
-      console.error('Error generating name:', error);
-      throw error;
+      console.error('Error generating names:', error);
+      toast.error(error instanceof Error ? error.message : 'Failed to generate names');
     }
   };
 

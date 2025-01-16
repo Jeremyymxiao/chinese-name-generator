@@ -7,9 +7,11 @@
   "user": {
     "sign_in": "登录",
     "sign_out": "退出登录",
-    "credits": "额度",
-    "api_keys": "API 密钥",
-    "my_orders": "我的订单"
+    "credits": "积分",
+    "api_keys": "API密钥",
+    "my_orders": "我的订单",
+    "subscription_status": "订阅状态",
+    "free": "免费版"
   },
   "sign_modal": {
     "sign_in_title": "登录",

@@ -17,10 +17,19 @@ export default async function ({ children }: { children: ReactNode }) {
     nav: {
       items: [
         {
+          title: t("user.dashboard"),
+          url: "/dashboard",
+          icon: "RiDashboardLine",
+        },
+        {
           title: t("user.my_orders"),
           url: "/my-orders",
           icon: "RiOrderPlayLine",
-          is_active: true,
+        },
+        {
+          title: t("user.settings"),
+          url: "/settings",
+          icon: "RiSettings4Line",
         },
       ],
     },

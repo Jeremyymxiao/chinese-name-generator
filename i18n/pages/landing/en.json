@@ -63,7 +63,7 @@
       }
     ],
     "show_happy_users": true,
-    "show_badge": true
+    "show_badge": false
   },
   "feature": {
     "name": "feature",
@@ -147,7 +147,7 @@
         "title": "Free",
         "description": "Perfect for trying out our service",
         "features": [
-          "3 name generations per day",
+          "Unlimited name generations",
           "Basic meaning explanations",
           "Simple pronunciation guide",
           "Gender-specific options"
@@ -165,14 +165,13 @@
         }
       },
       {
-        "title": "Premium",
+        "title": "Premium(Coming soon)",
         "description": "For those seeking the perfect name",
         "features": [
-          "Unlimited name generations",
+          "Unlimited name generations by AI",
           "Detailed character meanings",
           "Audio pronunciation",
           "Cultural significance",
-          "Name certificates",
           "Priority support"
         ],
         "interval": "month",

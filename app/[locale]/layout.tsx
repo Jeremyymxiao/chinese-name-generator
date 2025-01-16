@@ -3,17 +3,11 @@ import "@/app/globals.css";
 import { getMessages, getTranslations } from "next-intl/server";
 
 import { AppContextProvider } from "@/contexts/app";
-import { Inter as FontSans } from "next/font/google";
 import { Metadata } from "next";
-import { NextAuthSessionProvider } from "@/auth/session";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/providers/theme";
 import { cn } from "@/lib/utils";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { AuthProvider } from "@/contexts/AuthContext";
 
 export async function generateMetadata({
   params: { locale },
@@ -45,19 +39,18 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
-          fontSans.variable
+          "min-h-screen bg-background font-sans antialiased overflow-x-hidden"
         )}
       >
-        <NextIntlClientProvider messages={messages}>
-          <NextAuthSessionProvider>
+        <AuthProvider>
+          <NextIntlClientProvider messages={messages}>
             <AppContextProvider>
               <ThemeProvider attribute="class" disableTransitionOnChange>
                 {children}
               </ThemeProvider>
             </AppContextProvider>
-          </NextAuthSessionProvider>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </AuthProvider>
       </body>
     </html>
   );

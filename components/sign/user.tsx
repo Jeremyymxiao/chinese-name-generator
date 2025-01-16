@@ -1,11 +1,12 @@
 "use client";
 
-import * as React from "react";
-
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
@@ -13,38 +14,55 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import Link from "next/link";
-import { User } from "@/types/user";
-import { signOut } from "next-auth/react";
-import { useTranslations } from "next-intl";
+export default function User() {
+  const { user, logout } = useAuth();
+  const router = useRouter();
 
-export default function ({ user }: { user: User }) {
-  const t = useTranslations();
+  if (!user) {
+    return (
+      <Button
+        variant="outline"
+        onClick={() => router.push("/auth/signin")}
+      >
+        Sign In
+      </Button>
+    );
+  }
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Avatar className="cursor-pointer">
-          <AvatarImage src={user.avatar_url} alt={user.nickname} />
-          <AvatarFallback>{user.nickname}</AvatarFallback>
-        </Avatar>
+        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+          <Avatar className="h-8 w-8">
+            <AvatarImage src={user.photoURL || ""} alt={user.displayName || ""} />
+            <AvatarFallback>{user.displayName?.charAt(0) || "U"}</AvatarFallback>
+          </Avatar>
+        </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mx-4">
-        <DropdownMenuLabel className="text-center truncate">
-          {user.nickname}
+      <DropdownMenuContent className="w-56" align="end" forceMount>
+        <DropdownMenuLabel className="font-normal">
+          <div className="flex flex-col space-y-1">
+            <p className="text-sm font-medium leading-none">{user.displayName}</p>
+            <p className="text-xs leading-none text-muted-foreground">
+              {user.email}
+            </p>
+          </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-
-        <DropdownMenuItem className="flex justify-center cursor-pointer">
-          <Link href="/my-orders">{t("user.my_orders")}</Link>
+        <DropdownMenuItem onClick={() => router.push("/dashboard")}>
+          Dashboard
         </DropdownMenuItem>
-
+        <DropdownMenuItem onClick={() => router.push("/settings")}>
+          Settings
+        </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
-          className="flex justify-center cursor-pointer"
-          onClick={() => signOut()}
+          onClick={async () => {
+            await logout();
+            router.push("/");
+          }}
         >
-          {t("user.sign_out")}
+          Sign out
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

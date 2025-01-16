@@ -2,16 +2,14 @@
 
 import SignIn from "./sign_in";
 import User from "./user";
-import { useAppContext } from "@/contexts/app";
-import { useTranslations } from "next-intl";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function SignToggle() {
-  const t = useTranslations();
-  const { user } = useAppContext();
+  const { user } = useAuth();
 
   return (
     <div className="flex items-center gap-x-2 px-2">
-      {user ? <User user={user} /> : <SignIn />}
+      {user ? <User /> : <SignIn />}
     </div>
   );
 }

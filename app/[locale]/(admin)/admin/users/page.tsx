@@ -1,14 +1,22 @@
+"use client";
+
 export const runtime = 'edge';
 
 import { redirect } from 'next/navigation';
-import { auth } from '@/auth';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useAuth } from "@/contexts/AuthContext";
 
-export default async function UsersPage() {
-  const session = await auth();
+export default function UsersPage() {
+  const { user } = useAuth();
   
-  if (!session?.user) {
-    redirect('/auth/signin');
+  useEffect(() => {
+    if (!user) {
+      redirect('/auth/signin');
+    }
+  }, [user]);
+
+  if (!user) {
+    return null;
   }
 
   return (

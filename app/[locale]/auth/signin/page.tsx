@@ -1,17 +1,27 @@
-export const runtime = "edge";
+"use client";
+
+export const runtime = 'edge';
 
 import SignForm from "@/components/sign/form";
-import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import { useAuth } from "@/contexts/AuthContext";
+import { useEffect } from "react";
 
-export default async function SignInPage({
+export default function SignInPage({
   searchParams,
 }: {
   searchParams: { callbackUrl: string | undefined };
 }) {
-  const session = await auth();
-  if (session) {
-    return redirect(searchParams.callbackUrl || "/");
+  const { user } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      redirect(searchParams.callbackUrl || "/");
+    }
+  }, [user, searchParams.callbackUrl]);
+
+  if (user) {
+    return null;
   }
 
   return (

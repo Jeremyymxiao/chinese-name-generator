@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Sidebar } from "@/types/blocks/sidebar";
 import SidebarNav from "@/components/console/sidebar/nav";
 
-export default async function ConsoleLayout({
+export default function ConsoleLayout({
   children,
   sidebar,
 }: {
