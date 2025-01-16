@@ -1,5 +1,5 @@
 {
-  "name": "shipany-template-one",
+  "name": "chinese-name-generator",
   "version": "1.0.0",
   "private": true,
   "author": "idoubi",
@@ -11,8 +11,8 @@
     "lint": "next lint",
     "analyze": "ANALYZE=true pnpm build",
     "cf:build": "npx @cloudflare/next-on-pages",
-    "cf:preview": "pnpm cf:build && wrangler pages dev",
-    "cf:deploy": "pnpm cf:build && wrangler pages deploy",
+    "cf:preview": "pnpm cf:build && npx wrangler pages dev",
+    "cf:deploy": "pnpm cf:build && npx wrangler pages deploy",
     "migrate-to-supabase": "node --loader ts-node/esm scripts/migrate-to-supabase.ts"
   },
   "dependencies": {
@@ -58,6 +58,7 @@
     "embla-carousel-auto-scroll": "^8.5.1",
     "embla-carousel-fade": "^8.5.1",
     "embla-carousel-react": "^8.5.1",
+    "firebase": "^11.1.0",
     "framer-motion": "^11.15.0",
     "google-one-tap": "^1.0.6",
     "highlight.js": "^11.11.0",
@@ -98,7 +99,6 @@
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",
     "dotenv": "^16.4.7",
-    "firebase": "^11.1.0",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.4.49",
     "postcss-loader": "^8.1.1",
@@ -106,7 +106,8 @@
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
-    "vercel": "39.1.1"
+    "vercel": "39.1.1",
+    "wrangler": "^3.103.0"
   },
   "type": "module"
 }
