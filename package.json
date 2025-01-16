@@ -17,10 +17,10 @@
     "clean:all": "pnpm clean && rm -rf pnpm-lock.yaml",
     "migrate-to-supabase": "node --loader ts-node/esm scripts/migrate-to-supabase.ts"
   },
-  "packageManager": "pnpm@8.7.1",
+  "packageManager": "pnpm@9.15.3",
   "engines": {
-    "node": ">=18.12.0",
-    "pnpm": ">=8.7.1"
+    "node": "18.17.1",
+    "pnpm": ">=9.15.3"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.0.18",

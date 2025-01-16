@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm run cf:build",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "outputDirectory": ".vercel/output/static",
   "nodeVersion": "18"
 } 
